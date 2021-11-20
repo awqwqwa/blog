@@ -1,0 +1,22 @@
+#intro{
+    position: absolute;
+    display: block;
+    margin: auto;
+    height: 400px;
+    width: 600px;
+    border: 3px solid rgb(61, 162, 245);
+    background-image:url(../img/background/apic27286.jpg);
+    background-repeat: no-repeat;
+}
+img{
+    display: inline;
+}
+#intro h3{
+    color: aqua;
+    padding-top: 75px;
+    padding-left: 250px;
+}
+#intro p{
+    color: rgb(2, 15, 11);
+    padding-left: 75px;
+}
