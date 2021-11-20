@@ -1,0 +1,8 @@
+/*默认样式*/
+*{margin: 0; padding: 0; list-style-type: none; text-decoration: none}
+
+#pointer{position: -webkit-sticky;position: sticky;top: 0;}
+#pointer ul{padding: 0px;margin: 0;overflow: hidden;background-color: rgb(90, 151, 204);}
+#pointer ul li {float:left;display: block;padding:15px;}
+#pointer ul li a{color:rgb(243, 243, 243);}
+#pointer ul li:hover {background-color: rgb(15, 100, 134);}
