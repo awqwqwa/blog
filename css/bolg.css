@@ -1,0 +1,77 @@
+#textbook{
+    height: 500px;
+    width: 500px;
+    background: aqua;
+    background: url("../img/background/IMG_20211124_172217.jpg");
+    padding-left: 10px;
+}
+#textbook div{
+    padding: 5px;
+}
+#showlist {
+    border: 1px solid black;
+    height: 390px;
+    width: 400px;
+    border-radius: 10px;
+    overflow: auto;/*解决溢出问题*/
+}
+#showlist p{
+    background-color: rgba(9, 9, 231, 0.1);
+    border: 1px solid black;
+    padding:0px 10px;
+    border-radius: 10px;
+}
+#showlist ul li{
+    padding: 2px 0px;
+}
+#weather ul{
+    display: flex;/*使ili子元素成为弹性项目*/
+    justify-content: space-around;
+    flex-direction: row;
+    justify-content: center;
+    background-color: aqua;
+    margin-top:2px;
+    border-radius: 10px;
+}
+#weather ul li{
+    background-color: white;
+    margin: 20px 10px;
+    border-radius: 30px;
+    padding:10px;
+}
+#weather {
+    padding-left: 10px;
+}
+#music{
+    margin: 10px;
+    width: 500px;
+    height: 1000px;
+    display: inline-block ;
+    border: 1px solid black;
+    padding:25px;
+    border-radius: 30px;
+    background:url("../img/background/IMG_20211124_172334.jpg");
+}
+#searchmusic{
+    margin-left: 100px;
+}
+
+
+#music ul{
+    padding-left: 75px;
+}
+#music ul li div img{
+    width: 18px;
+    height: 18px;
+}
+
+audio{
+    position: fixed;
+    right:10px;
+    top: 90px;
+
+}
+#joke{
+    display: inline-block;
+    width: 300px;
+}

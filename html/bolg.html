@@ -5,6 +5,7 @@
 	<title>My blog</title>
 	<link rel="icon"  type"image/x-icon" href="../img/icon/n2.png" >
     <link rel="stylesheet" href="../css/do.css" type="text/css"/>
+    <link rel="stylesheet" href="../css/bolg.css" type="text/css"/>
 
 </head>
 <body>
@@ -12,9 +13,9 @@
 <div id="pointer">
     <ul>
         <li class="active"><a href="bolg.html">首页</a></li>
-        <li><a href="message.html">文章</a></li>
-        <li><a href="talking.html">留言</a></li>
-        <li><a href="introduce.html">关于我</a></li>
+        <li><a href="message.html" target="_blank">文章</a></li>
+        <li><a href="talking.html" target="_blank">留言</a></li>
+        <li><a href="introduce.html" target="_blank">关于我</a></li>
         <li style="float:right;"><form>
             <input type="text" name="firstname">
             <input type="submit" value="搜索">
@@ -32,17 +33,18 @@
      <input type="text" v-model="num" @keyup.enter="del">
      <input type="button" value="删除" @click="del">
     </div>
-    <div>
+    <div id="showlist">
         <ul>
             <li v-for="(item,i) in arr">
-                <p style="display: inline;">{{item}}</p>
+                <p style="display: inline;">{{i}}.{{item}}</p
+                    >
             </li>
         </ul>
     </div>
  </div>
  <div id="weather">
     <input type="text" v-model="city" @keyup.enter="getweather(city)"></input>
-    <input type="button" value="搜索" @click="getweather(city)">
+    <input type="button" value="查询天气" @click="getweather(city)">
     <ul>
         <li v-for="item in arr">
             <h2>{{item.date}}</h2>
@@ -55,20 +57,24 @@
     </ul>
 
 </div>
-<div id="joke">
-    <input type="button" value="get a joke" @click="get">
-    <h2 >{{joke}}</h2>
-
-</div>
 <div id="music">
-    <input type="text" v-model="name">
-    <input type="button" value="搜索音乐" @click="search()">
+    <div id:="secrchMusic">
+    <input type="text" v-model="name" @keyup.enter="search">
+    <input type="button" value="搜索音乐(点小鱼有惊喜）" @click="search">
+    </div>
+    <audio ref='audio' :src="http"controls="controls" autoplay="autoplay" loop="loop"height="100" width="100"></audio>
+    
     <ul>
         <li v-for="data in arr">
-            <a  @click="play(data.id)"><h3>{{data.name}}</h3></a> 
+            <div><img src="../img/icon/e10.png" alt="" @click="play(data.id)"><b>{{data.name}}</b></div>
         </li>
     </ul>
-    <audio ref='audio' :src="http"controls="controls" autoplay="autoplay" loop="loop"height="100" width="100"></audio>
+    
+</div>
+<div id="joke">
+    <input type="button" value="get a joke" @click="get">
+    <h4 >{{joke}}</h4>
+
 </div>
  <script src="../vue/vue.js">//导入js//https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js</script>
  <script src="https://unpkg.com/axios/dist/axios.min.js">//导入axios</script>

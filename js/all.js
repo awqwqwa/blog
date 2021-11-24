@@ -36,7 +36,7 @@
    var on = new Vue({
         el:"#joke",
         data:{
-            joke:"hhhh",
+            joke:"点击上面看笑话哦",
         },
         methods:{
             get:function(){
