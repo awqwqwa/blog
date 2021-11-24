@@ -6,3 +6,4 @@
 #pointer ul li {float:left;display: block;padding:15px;}
 #pointer ul li a{color:rgb(243, 243, 243);}
 #pointer ul li:hover {background-color: rgb(15, 100, 134);}
+.active{background-color: rgb(28, 161, 161);}

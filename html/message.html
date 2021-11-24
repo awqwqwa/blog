@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"></meta>
+	<title>My blog</title>
+	<link rel="icon"  type"image/x-icon" href="../img/icon/n2.png" >
+    <link rel="stylesheet" href="../css/do.css" type="text/css"/>
+</head>
+<body>
+    <img src="../img/top.png" alt="" width=100% style="padding: 0px;margin: 0px;">
+<div id="pointer">
+    <ul>
+        <li><a href="bolg.html">首页</a></li>
+        <li class="active"><a href="message.html">文章</a></li>
+        <li><a href="talking.html">留言</a></li>
+        <li><a href="introduce.html">关于我</a></li>
+        <li style="float:right;"><form>
+            <input type="text" name="firstname">
+            <input type="submit" value="搜索">
+            <form>   
+        </li>
+    </ul>
+    
+</div>
+<div id="upload">
+    <form>
+        <label>标题：</label>
+        <input type="text" v-model="title">
+        <br>
+        <label>内容：</label>
+        <textarea v-model="message"></textarea>
+        <br>
+        <label>作者：</label>
+        <input type="text" v-model="author">
+        <br>
+        <input type="button" @click="push" value="提交">
+    </form>
+    <hr>
+    <div id="view">
+        <h4>标题：</h4>
+        <h5>{{title}}</h5>
+        <h4>内容：</h4>
+        <pre>{{message}}</pre>
+        <h4 style="display: inline;">作者：</h4>
+        <p>{{author}}</p>
+    </div>
+</div>
+<hr>
+<div id="showmessage">
+    <div v-for="data in arr">
+    <h5>{{data.title}}</h5>
+    <pre>{{data.body}}</pre>
+    </div>
+    <input type="button" value="click me to show" @click="show" v-if="bool">
+</div>
+<script src="../vue/vue.js">//导入js//https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js</script>
+<script src="https://unpkg.com/axios/dist/axios.min.js">//导入axios</script>
+<script type="text/javascript" src="../js/all.js"></script>
+</body>
+</html>

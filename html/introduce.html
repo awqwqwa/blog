@@ -12,9 +12,9 @@
 <div id="pointer">
     <ul>
         <li><a href="bolg.html">首页</a></li>
-        <li><a href="#">文章</a></li>
-        <li><a href="#">留言</a></li>
-        <li><a href="introduce.html">关于我</a></li>
+        <li><a href="message.html">文章</a></li>
+        <li><a href="talking.html">留言</a></li>
+        <li class="active"><a href="introduce.html">关于我</a></li>
         <li style="float:right;"><form>
             <input type="text" name="firstname">
             <input type="submit" value="搜索">
@@ -23,8 +23,12 @@
     </ul>
     
 </div >
-<div id="side"></div>
-<img src="../img/ys/f2a146dce71190efa49d2f92d91b9d16fcfa60ab.jpg" alt="" width="20%">
+<div id="app">
+    <button @click="doit" >click me to change the image</button>
+    <img :src="arr[index]" alt="" style="display:block;" width="20%">
+    
+</div>
+
 <div id="intro" >
 <h3>基本资料</h3>
 <p style="margin-top: 20px;">生物类型：xxx</p>
@@ -34,5 +38,8 @@
 <p>体重：xxx</p>
 <p>特征：无</p>
 </div>
+<script src="../vue/vue.js">//导入js//https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js</script>
+<script src="https://unpkg.com/axios/dist/axios.min.js">//导入axios</script>
+<script type="text/javascript" src="../js/all.js"></script>
 </body>
 </html>
