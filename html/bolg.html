@@ -59,8 +59,8 @@
 </div>
 <div id="music">
     <div id:="secrchMusic">
-    <input type="text" v-model="name" @keyup.enter="search">
-    <input type="button" value="搜索音乐(点小鱼有惊喜）" @click="search">
+    <input type="text" v-model="name" placeholder="(点小鱼有惊喜)" @keyup.enter="search">
+    <input type="button" value="搜索音乐" @click="search">
     </div>
     <audio ref='audio' :src="http"controls="controls" autoplay="autoplay" loop="loop"height="100" width="100"></audio>
     
@@ -73,7 +73,7 @@
 </div>
 <div id="joke">
     <input type="button" value="get a joke" @click="get">
-    <h4 >{{joke}}</h4>
+    <h4>{{joke}}</h4>
 
 </div>
  <script src="../vue/vue.js">//导入js//https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js</script>

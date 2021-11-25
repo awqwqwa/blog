@@ -55,16 +55,16 @@
 #searchmusic{
     margin-left: 100px;
 }
-
-
 #music ul{
     padding-left: 75px;
+}
+#music ul li b{
+    color:cyan;
 }
 #music ul li div img{
     width: 18px;
     height: 18px;
 }
-
 audio{
     position: fixed;
     right:10px;
@@ -72,6 +72,17 @@ audio{
 
 }
 #joke{
-    display: inline-block;
-    width: 300px;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 20px;
+    width: 220px;
+    height: 300px;
+    position: fixed;
+    right: 10px;
+    bottom: 60px;
+}
+#joke h4{
+    color: rgba(9, 9, 231, 0.3);
+    overflow: auto;
 }

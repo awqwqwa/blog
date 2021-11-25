@@ -5,6 +5,7 @@
 	<title>My blog</title>
 	<link rel="icon"  type"image/x-icon" href="../img/icon/n2.png" >
     <link rel="stylesheet" href="../css/do.css" type="text/css"/>
+    <link rel="stylesheet" href="../css/message.css" type="text/css"/>
 </head>
 <body>
     <img src="../img/top.png" alt="" width=100% style="padding: 0px;margin: 0px;">
@@ -31,7 +32,7 @@
         <textarea v-model="message"></textarea>
         <br>
         <label>作者：</label>
-        <input type="text" v-model="author">
+        <input type="text" v-model="author" placeholder="(这个暂时没什么作用)">
         <br>
         <input type="button" @click="push" value="提交">
     </form>
@@ -53,6 +54,7 @@
     </div>
     <input type="button" value="click me to show" @click="show" v-if="bool">
 </div>
+
 <script src="../vue/vue.js">//导入js//https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js</script>
 <script src="https://unpkg.com/axios/dist/axios.min.js">//导入axios</script>
 <script type="text/javascript" src="../js/all.js"></script>
