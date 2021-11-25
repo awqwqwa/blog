@@ -33,17 +33,14 @@
         <br>
         <label>作者：</label>
         <input type="text" v-model="author" placeholder="(这个暂时没什么作用)">
-        <br>
         <input type="button" @click="push" value="提交">
     </form>
-    <hr>
     <div id="view">
-        <h4>标题：</h4>
-        <h5>{{title}}</h5>
-        <h4>内容：</h4>
+        <h5 style="text-align: center;">{{title}}</h5>
         <pre>{{message}}</pre>
-        <h4 style="display: inline;">作者：</h4>
-        <p>{{author}}</p>
+        <br>
+        <h4 style="display: inline;">作者：{{author}}</h4>
+
     </div>
 </div>
 <hr>

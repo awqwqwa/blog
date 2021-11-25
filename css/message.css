@@ -7,7 +7,18 @@
         border: 3px solid #ccc;
         border-radius: 4px;
         box-sizing: border-box;
-      }
+}
+#upload input[type=button]{
+        margin: 10px;
+        padding:12px;
+        width: 20%;
+        background-color: aquamarine;
+        padding: 12px 20px;
+        border-radius: 4px;
+}
+#upload label{
+    margin: 10px;
+}
 #upload textarea{
     width: 95%;
     height: 500px;
@@ -17,6 +28,9 @@
     border-radius: 10px;
     border: 3px solid #ccc;
     overflow: auto;
+    background: url("../img/background/IMG_20211124_172245.jpg");
+    background-repeat: no-repeat;
+    background-position: right bottom;
 }
 #showmessage div{
     border: 1px solid black;;
@@ -27,6 +41,27 @@
     height: 180px;
     overflow: auto;
 }
+#showmessage input[type=button]{
+    margin: 10px;
+    padding:12px;
+    width: 20%;
+    background-color:rgb(37, 186, 255);
+    padding: 12px 20px;
+    border-radius: 4px;
+}
 #showmessage div h5{
     text-align: center;
+}
+#view{
+    width: 95%;
+    height: 500px;
+    resize: none;/*固定边框大小*/
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 3px solid #ccc;
+    overflow: auto;
+    background: url("../img/background/IMG_20211124_172245.jpg");
+    background-repeat: no-repeat;
+    background-position: right bottom;
 }
