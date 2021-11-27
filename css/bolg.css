@@ -1,5 +1,5 @@
 #textbook{
-    height: 500px;
+    height: 580px;
     width: 500px;
     background: aqua;
     background: url("../img/background/IMG_20211124_172217.jpg");
@@ -7,6 +7,23 @@
 }
 #textbook div{
     padding: 5px;
+}
+#textbook input[type=text]{
+    width: 50%;
+    padding: 12px 20px;
+    margin: 0px 10px;
+    border: 3px solid aqua;
+    border-radius: 10px;
+    box-sizing: border-box;
+    color:chartreuse;
+}
+#textbook input[type=button]{
+    margin: 10px;
+    padding:12px;
+    width: 20%;
+    background-color: aquamarine;
+    padding: 12px 20px;
+    border-radius: 4px;
 }
 #showlist {
     border: 1px solid black;

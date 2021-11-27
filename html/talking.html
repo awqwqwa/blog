@@ -5,6 +5,7 @@
 	<title>My blog</title>
 	<link rel="icon"  type"image/x-icon" href="../img/icon/n2.png" >
     <link rel="stylesheet" href="../css/do.css" type="text/css"/>
+    <link rel="stylesheet" href="../css/talking.css" type="text/css"/>
 </head>
 <body>
     <img src="../img/top.png" alt="" width=100% style="padding: 0px;margin: 0px;">
@@ -19,11 +20,28 @@
             <input type="submit" value="搜索">
             <form>   
         </li>
-    </ul>
-    
+    </ul> 
 </div>
-<div id="side"></div>
-<div id="mainpart">
+<div id="lmessage">
+    <form>
+<input id="firat" type="text" v-model="message.name" placeholder="（请先输入姓名）">
+<textarea v-model="message.contain" placeholder="留言信息"></textarea>
+<input type="button" value="留言" @click="sent">
+    </form>
+    <div id="view">
+        <ul>
+            <li v-for="data in arr">
+                <h5>{{data.name}}:</h5>
+                <pre>{{data.contain}}</pre>
+                <hr>
+            </li>
+        </ul>
+    </div>
 </div>
+
+
+<script src="../vue/vue.js">//导入js//https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js</script>
+<script src="https://unpkg.com/axios/dist/axios.min.js">//导入axios</script>
+<script type="text/javascript" src="../js/all.js"></script>
 </body>
 </html>

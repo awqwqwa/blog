@@ -19,7 +19,6 @@
     data:{
         message:"这里可以输入你的备忘录",
         num:0,
-        n:0,
         arr:[""],
         
     },
@@ -80,7 +79,6 @@
    var music = new Vue({
         el:"#music",
         data:{
-            name,
             http:"",
             arr:[],
         },
@@ -152,3 +150,28 @@
     }
 
    })
+   var lmessage = new Vue({
+        el:"#lmessage",
+        data:{
+            message:{name:"",contain:""},
+            arr:[{}]
+        },
+        methods:{
+            sent:function(){
+                if(this.message.name==""){
+                    alert("请输入用户名")
+                }else{
+                    this.arr.push(this.message);
+                }
+                var that=this;
+                axios.post("http://jsonplaceholder.typicode.com/posts",{//http://jsonplaceholder.typicode.com/posts
+                title:that.message.name,body:that.message.contain,userId:1})
+                .then(
+                    function(a){
+                        console.log(a);//测试用
+                    }
+                    )
+            }
+        }
+            
+    })
